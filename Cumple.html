@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumple</title>
+
+  <style>
+    /* quitar márgenes */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+
+      /* 👉 fondo pixel art */
+      background-image: url("imgs/fondo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      /* color detrás si la imagen no llena */
+      background-color: #ffddee;
+
+      /* importantísimo para pixel art */
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .escena {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* TEXTO */
+.textoPrincipal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+  image-rendering: pixelated;
+}
+
+/* FOTOS */
+.foto {
+  position: absolute;
+  width: 160px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(255, 150, 200, 0.4);
+
+  transition: transform 0.3s;
+}
+
+.foto:hover {
+  transform: scale(1.1);
+}
+
+/* POSICIONES */
+
+.f1 {
+  top: 5%;
+  left: 15%;
+  width: 250px;
+  transform: rotate(-8deg);
+}
+
+.f2 {
+  top: 10%;
+  right: 10%;
+   width: 300px;
+  transform: rotate(6deg);
+}
+
+.f3 {
+  top: 45%;
+  left: 10%;
+   width: 250px;
+  transform: rotate(4deg);
+}
+
+.f4 {
+  top: 42%;
+  right: 10%;
+   width: 250px;
+  transform: rotate(-5deg);
+}
+
+.f5 {
+  bottom: 10%;
+  left: 35%;
+   width: 200px;
+  transform: rotate(-100deg);
+}
+
+.f6 {
+  bottom: 5%;
+  right: 30%;
+   width: 250px;
+  transform: rotate(7deg);
+}
+
+.siguienteBoton {
+  position: absolute;   /* 🔴 ESTO ES LO QUE FALTABA */
+
+  bottom: 0%;           /* distancia desde abajo */
+  right: 5%;            /* distancia desde la derecha */
+
+  width: 400px;
+
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+
+ <div class="escena">
+
+    <!-- texto central -->
+    <img 
+      src="imgs/textofondo.png"
+      class="textoPrincipal"
+    >
+
+    <!-- fotos -->
+    <img src="imgs/img1.jpeg" class="foto f1">
+    <img src="imgs/img2.jpeg" class="foto f2">
+    <img src="imgs/img3.jpeg" class="foto f3">
+    <img src="imgs/img4.jpeg" class="foto f4">
+    <img src="imgs/img5.jpeg" class="foto f5">
+    <img src="imgs/img6.jpeg" class="foto f6">
+
+  </div>
+
+
+   <img
+    src="imgs/siguienteBOton.png"
+    class="siguienteBoton"
+    onclick="go()"
+   >
+
+
+  <script>
+    function go() {
+      window.location.href = "Final.html";
+    }
+  </script>
+
+</body>
+</html>
+
+
+ 

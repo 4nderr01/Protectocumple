@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumple</title>
+
+  <style>
+    /* quitar márgenes */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+
+      /* 👉 fondo pixel art */
+      background-image: url("imgs/fondocum.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      /* color detrás si la imagen no llena */
+      background-color: #ffddee;
+
+      /* importantísimo para pixel art */
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* botón encima */
+    .boton {
+      position: absolute;
+      bottom: 80px;
+
+      width: 560px;
+      cursor: pointer;
+
+      image-rendering: pixelated;
+    }
+
+    .boton:hover {
+      transform: scale(1.05);
+
+
+     
+
+    }
+
+    .gatito{
+         position: absolute;
+        top: 24%;
+       right: 21%;
+  
+
+  width: 150px;
+
+  image-rendering: pixelated;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+
+   <img
+      src="imgs/gatitomove.gif"
+      class="gatito" 
+    >
+
+  <!-- BOTÓN -->
+  <img 
+    src="imgs/boton.png" 
+    class="boton"
+    onclick="ir()"
+  >
+
+  <script>
+    function ir() {
+      window.location.href = "Cumple.html";
+    }
+  </script>
+
+</body>
+</html>
